@@ -35,7 +35,7 @@ vectorstore = FAISS.from_documents(
 # Enable MMR in the retriever
 retriever = vectorstore.as_retriever(
     search_type="mmr", # This enables MMR search
-    search_kwargs={"k": 3, 'lambda_mult': 0.5} # k = top results, lambda_mult = MMR parameter, relevance-diversity balance 1 -> behaves exactly as regular search tedchnique, 0 -> returns highly distinct documents
+    search_kwargs={"k": 3, 'lambda_mult': 0.5} # k = top results, lambda_mult = MMR parameter, relevance-diversity balance 1 -> behaves exactly as regular search technique, 0 -> returns highly distinct documents
 )
 
 query = "What is Langchain?"
